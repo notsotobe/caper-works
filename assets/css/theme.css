@@ -4979,11 +4979,18 @@ body,
 #page-header .ph-about,
 #tt-page-content > .tt-site-section:nth-of-type(even),
 #tt-footer.tt-site-section-footer,
-#tt-header.tt-filled::before,
 body.tt-m-menu-open .tt-main-menu {
 	background-image: var(--tt-bg-pattern);
 	background-attachment: fixed;
 	background-repeat: repeat;
+}
+
+#tt-header::before {
+	background-image: none;
+}
+
+#tt-header.tt-header-fixed::before {
+	background-color: var(--tt-bg-color);
 }
 
 .tt-accordion.tt-acc-boxed.tt-acc-tilted .tt-accordion-item {
@@ -5046,13 +5053,13 @@ body.tt-m-menu-open .tt-main-menu {
 /* Hero + about — mobile typography */
 @media (max-width: 1024px) {
 	#page-header.tt-site-section-hero.ph-cap-xlg .ph-caption-title {
-		font-size: clamp(34px, 6vw, 48px) !important;
+		font-size: clamp(37px, 6.6vw, 53px) !important;
 		line-height: 1.15;
 	}
 
 	#page-header.tt-site-section-hero .ph-caption-description {
 		margin-top: 28px;
-		font-size: 17px;
+		font-size: 19px;
 		line-height: 1.45;
 	}
 
@@ -5070,13 +5077,13 @@ body.tt-m-menu-open .tt-main-menu {
 
 @media (max-width: 767px) {
 	#page-header.tt-site-section-hero.ph-cap-xlg .ph-caption-title {
-		font-size: clamp(30px, 8.5vw, 38px) !important;
+		font-size: clamp(33px, 9.35vw, 42px) !important;
 		line-height: 1.2;
 	}
 
 	#page-header.tt-site-section-hero .ph-caption-description {
 		margin-top: 20px;
-		font-size: 16px;
+		font-size: 18px;
 	}
 
 	#page-header .ph-about .tt-heading-lg .tt-heading-title {
@@ -5091,6 +5098,80 @@ body.tt-m-menu-open .tt-main-menu {
 	#page-header .ph-about {
 		padding-top: 24px;
 		padding-bottom: 32px;
+	}
+}
+
+/* Hero caption — visual treatment */
+#page-header.tt-site-section-hero .tt-hero-eyebrow {
+	margin: 0 0 16px;
+	font-family: monospace, monospace;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--tt-main-color);
+}
+
+#page-header.tt-site-section-hero .ph-caption-title .text-primary {
+	color: var(--tt-main-color);
+}
+
+@media (min-width: 1025px) {
+	#page-header.tt-site-section-hero .tt-hero-caption {
+		border-left: 4px solid var(--tt-main-color);
+		padding-left: clamp(28px, 3vw, 40px);
+	}
+
+	#page-header.tt-site-section-hero .tt-hero-eyebrow {
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+
+	#page-header.tt-site-section-hero .ph-caption-description {
+		max-width: 520px;
+		margin-left: 2px;
+		padding: 4px 0 4px 16px;
+		border-left: 1px solid rgb(22 23 26 / 20%);
+	}
+}
+
+@media (max-width: 1024px) {
+	#page-header.tt-site-section-hero.ph-full-m {
+		min-height: auto;
+	}
+
+	#page-header.tt-site-section-hero.ph-full-m .page-header-inner {
+		padding-top: 100px;
+		padding-bottom: 28px;
+		padding-left: clamp(20px, 5vw, 32px);
+		padding-right: clamp(20px, 5vw, 32px);
+	}
+
+	#page-header.tt-site-section-hero .tt-hero-caption {
+		background-color: var(--tt-accent-bg-color);
+		border: 2px solid var(--tt-border-color);
+		border-radius: clamp(12px, 3vw, 20px);
+		box-shadow: 8px 8px 0 -2px var(--tt-shadow-color);
+		padding: clamp(24px, 5vw, 32px);
+	}
+
+	#page-header.tt-site-section-hero .tt-hero-eyebrow {
+		margin-bottom: 14px;
+		font-size: 12px;
+	}
+
+	#page-header.tt-site-section-hero .ph-caption-description {
+		margin-top: 20px;
+		padding-top: 18px;
+		border-top: 1px solid rgb(22 23 26 / 15%);
+		color: var(--tt-text-muted-color);
+	}
+}
+
+@media (max-width: 767px) {
+	#page-header.tt-site-section-hero.ph-full-m .page-header-inner {
+		padding-top: 88px;
+		padding-bottom: 24px;
 	}
 }
 
@@ -5184,7 +5265,7 @@ body.tt-m-menu-open .tt-main-menu {
 
 /* About intro */
 #about .text-xlg p {
-	text-align: justify;
+	text-align: left;
 }
 
 /* Content edge breathing room */
