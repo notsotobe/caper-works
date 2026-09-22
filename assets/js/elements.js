@@ -469,6 +469,36 @@
 	});
 
 
+	// Mobile card carousels (services + portfolio)
+	function initMobileSwiperCarousel(selector) {
+		document.querySelectorAll(selector).forEach(function (root) {
+			const swiperEl = root.querySelector(".swiper");
+			const paginationEl = root.querySelector(".tt-mobile-swiper-pagination");
+			if (!swiperEl || !paginationEl) return;
+
+			new Swiper(swiperEl, {
+				slidesPerView: 1,
+				spaceBetween: 16,
+				loop: true,
+				grabCursor: true,
+				speed: 450,
+				pagination: {
+					el: paginationEl,
+					clickable: true,
+					bulletClass: "tt-mobile-swiper-bullet",
+					bulletActiveClass: "tt-mobile-swiper-bullet-active",
+				},
+				breakpoints: {
+					768: { enabled: false },
+				},
+			});
+		});
+	}
+
+	initMobileSwiperCarousel(".tt-mobile-swiper");
+	initMobileSwiperCarousel(".tt-portfolio-mobile-swiper");
+
+
 
 	// ================================================================
 	// tt-Image

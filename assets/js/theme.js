@@ -827,6 +827,17 @@
 			// Masonry calculation function
 			// =============================
 			function tt_gridApplyMasonry() {
+				if (ttGrid.hasClass("tt-portfolio-mobile-swiper") && window.innerWidth < 768) {
+					ttGridItem.forEach(function (item) {
+						item.style.position = "";
+						item.style.top = "";
+						item.style.left = "";
+						item.style.width = "";
+					});
+					ttGridList.style.height = "auto";
+					return;
+				}
+
 				const ttGridColWidth = ttGridList.getBoundingClientRect().width;
 				let cols = Math.floor(ttGridColWidth / 340);
 				cols = Math.max(ttGridMobileMinCols, Math.min(ttGridMaxCols, cols));
