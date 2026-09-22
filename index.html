@@ -59,7 +59,7 @@
 	* Note: there may be classes that are specific to this page only!
 	* IMPORTANT: If you use your own background pattern, ensure it doesn't create excessive contrast with the rest of the page elements. A background pattern works best if it's transparent, barely noticeable, and doesn't confuse website visitors. If you don't want to use it, just remove the "style" attribute.
 	-->
-	<body id="body" class="tt-transition tt-smooth-scroll" style="--tt-bg-pattern: url('assets/img/bg-pattern.png');">
+	<body id="body" class="tt-transition tt-smooth-scroll">
 
 
 		<!-- *************************************
@@ -97,7 +97,7 @@
 				* Use class "tt-header-filled" to add background color to header on scroll (effect only with class "tt-header-scroll" and "tt-header-fixed").
 				* Use class "tt-header-alter" to enable alternative layout (for desktop only!).
 				-->
-				<header id="tt-header" class="tt-header-alter tt-header-scroll tt-header-filled">
+				<header id="tt-header" class="tt-header-alter tt-header-fixed tt-header-filled">
 					<div class="tt-header-inner"> 
 
 						<div class="tt-header-col tt-header-col-left">
@@ -126,14 +126,43 @@
 									<div class="tt-main-menu-inner">
 										<div class="tt-main-menu-content">
 
-											<!-- Begin main menu list -->
-											<ul class="tt-main-menu-list">
-												<li><a href="#services">What we Do</a></li>
-												<li><a href="#work">Our Work</a></li>
-												<li><a href="#process">Our Process</a></li>
-												<li><a href="#blog">Blog</a></li>
-											</ul>
-											<!-- End main menu list -->
+											<div class="tt-m-menu-nav">
+												<!-- Begin main menu list -->
+												<ul class="tt-main-menu-list">
+													<li><a href="#services">What we Do</a></li>
+													<li><a href="#work">Our Work</a></li>
+													<li><a href="#process">Our Process</a></li>
+													<li><a href="#blog">Blog</a></li>
+												</ul>
+												<!-- End main menu list -->
+												<a href="https://wa.me/919256449413" class="tt-btn tt-btn-primary tt-m-menu-cta hide-to-xlg" target="_blank" rel="noopener">
+													<span>Let's Talk</span>
+													<span class="tt-btn-icon"><i class="fa-brands fa-whatsapp"></i></span>
+												</a>
+											</div>
+
+											<div class="tt-m-menu-contact">
+												<div class="tt-m-menu-contact-grid">
+													<div class="tt-m-menu-contact-box">
+														<h3 class="tt-m-menu-contact-heading">Our Location</h3>
+														<a href="https://maps.app.goo.gl/EdmcTQ9LZZFb2Lfu5" class="tt-link" target="_blank" rel="noopener">III, A-10, Mohru Nagar, Manyawas, Mansarovar, Jaipur - 302020</a>
+													</div>
+													<div class="tt-m-menu-contact-box">
+														<h3 class="tt-m-menu-contact-heading">Contact Details</h3>
+														<ul class="tt-list">
+															<li><a href="tel:+919256449413" class="tt-link">+91 92564 49413</a></li>
+															<li><a href="mailto:hello@caperworks.com" class="tt-link">hello@caperworks.com</a></li>
+														</ul>
+													</div>
+													<div class="tt-m-menu-contact-box tt-m-menu-contact-box-social">
+														<h3 class="tt-m-menu-contact-heading">Follow Us</h3>
+														<a href="https://instagram.com/caper.works" class="tt-footer-social-link" target="_blank" rel="noopener" aria-label="Caper Works on Instagram">
+															<i class="fa-brands fa-instagram" aria-hidden="true"></i>
+															<span>@caper.works</span>
+														</a>
+													</div>
+												</div>
+											</div>
 
 										</div> <!-- /.tt-main-menu-content -->
 									</div> <!-- /.tt-main-menu-inner -->
@@ -141,6 +170,10 @@
 
 							</nav> 
 							<!-- End main menu -->
+
+							<a href="https://instagram.com/caper.works" class="tt-header-social hide-from-xlg" target="_blank" rel="noopener" aria-label="Caper Works on Instagram">
+								<i class="fa-brands fa-instagram" aria-hidden="true"></i>
+							</a>
 
 						</div> <!-- /.tt-header-col -->
 
@@ -160,7 +193,7 @@
 
 							<!-- Begin header button (hidden on small screens!) -->
 							<a href="https://wa.me/919256449413" class="tt-btn tt-btn-primary hide-from-xlg" target="_blank" rel="noopener">
-								<span data-hover="Let's Talk">Let's Talk</span>
+								<span>Let's Talk</span>
 								<span class="tt-btn-icon"><i class="fa-brands fa-whatsapp"></i></span>
 							</a>
 							<!-- End header button -->
@@ -783,7 +816,7 @@
 										<h3 class="tt-contact-info-heading">Our Location</h3>
 										<ul class="tt-list">
 											<li>
-												<a href="https://maps.google.com/?q=III+A-10+Mohru+Nagar+Manyawas+Mansarovar+Jaipur+302020" class="tt-link" target="_blank" rel="noopener">III, A-10, Mohru Nagar, Manyawas,<br>Mansarovar, Jaipur - 302020</a>
+												<a href="https://maps.app.goo.gl/EdmcTQ9LZZFb2Lfu5" class="tt-link" target="_blank" rel="noopener">III, A-10, Mohru Nagar, Manyawas,<br>Mansarovar, Jaipur - 302020</a>
 											</li>
 										</ul>
 									</div>
@@ -799,6 +832,13 @@
 										</ul>
 									</div>
 								</div>
+								<div class="tt-footer-box tt-footer-box-social">
+									<h3 class="tt-contact-info-heading">Follow Us</h3>
+									<a href="https://instagram.com/caper.works" class="tt-footer-social-link" target="_blank" rel="noopener" aria-label="Caper Works on Instagram">
+										<i class="fa-brands fa-instagram" aria-hidden="true"></i>
+										<span>@caper.works</span>
+									</a>
+								</div>
 								<div class="tt-footer-box tt-footer-box-copy">
 									<div class="tt-footer-copyright">
 										©<span class="tt-copyright-year"></span> <a href="https://caperworks.com/" class="tt-link">Caper Works</a><br>
@@ -808,7 +848,7 @@
 								<div class="tt-footer-box tt-footer-box-credit">
 									<div class="tt-footer-credit-inner">
 										<span>Made with <i class="fa-solid fa-heart text-primary"></i></span>
-										<span>by <span class="bold text-primary">Caper Works</span></span>
+										<span>by <a href="https://caperworks.com/" class="tt-link bold text-primary" target="_blank" rel="noopener">Caper Works</a></span>
 									</div>
 								</div>
 							</div>
