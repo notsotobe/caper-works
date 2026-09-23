@@ -1644,25 +1644,6 @@
 
 
 	// ================================================================
-	// Fancybox (lightbox plugin)
-	// https://fancyapps.com/
-	// ================================================================
-
-	$('[data-fancybox]').fancybox({
-		animationEffect: "fade",
-		loop: true,
-		wheel: false,
-		hash: false,
-		backFocus: false,
-		// protect: true,
-		buttons: [
-			"close",
-		],
-	});
-
-
-
-	// ================================================================
 	// GSAP ScrollTrigger plugin (do something while scrolling)
 	// More info: https://greensock.com/docs/v3/Plugins/ScrollTrigger/
 	// ================================================================ 

@@ -460,15 +460,6 @@
 		updateButtons();
 	}
 
-	$(".tt-testimonials-carousel").each(function () {
-		initScrollCarousel($(this), ".tt-testimonials-scroll", ".tt-testimonials-scroll-item", ".tt-ts-nav-prev", ".tt-ts-nav-next");
-	});
-
-	$(".tt-blog-carousel").each(function () {
-		initScrollCarousel($(this), ".tt-blog-scroll", ".tt-blog-scroll-item", ".tt-blog-nav-prev", ".tt-blog-nav-next");
-	});
-
-
 	// Mobile card carousels (services + portfolio)
 	function initMobileSwiperCarousel(selector) {
 		document.querySelectorAll(selector).forEach(function (root) {
